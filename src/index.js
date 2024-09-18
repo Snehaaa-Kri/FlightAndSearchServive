@@ -1,4 +1,5 @@
-const express = require("express"); //imports express.js library
+const express = require("express"); 
+const bodyParser = require('body-parser');
 
 const {PORT} = require('./config/serverconfig')
 
@@ -6,12 +7,18 @@ const {PORT} = require('./config/serverconfig')
 //function making
 const setUpAndStartServer = async () => {
 
-    const app = express();  //create express object/application
-  
+    const app = express(); 
 
+
+    //body-parser
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: true}));
+  
+    //express
+    let PORT = 3002;
     app.listen(PORT, ()=>{
         console.log(`Server started at ${PORT}`);
-        console.log("Process obj is: ", process.env.PORT);
+        // console.log("Process obj is: ", process.env.PORT);
     });
 }
 
