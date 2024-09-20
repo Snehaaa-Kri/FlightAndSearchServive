@@ -10,12 +10,12 @@ const setUpAndStartServer = async () => {
     const app = express(); 
 
 
-    //body-parser
+    //body-parser -2(middlewares)
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
   
     //express
-    let PORT = 3002;
+   
     app.listen(PORT, ()=>{
         console.log(`Server started at ${PORT}`);
         // console.log("Process obj is: ", process.env.PORT);
