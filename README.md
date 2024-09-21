@@ -25,7 +25,7 @@
       "development": {
         "username": <Your db login name>,
         "password": <Your db password>,
-        "database": "database_development",
+        "database": "database_name",
         "host": "127.0.0.1",
         "dialect": "mysql"
       }
@@ -33,3 +33,17 @@
     ```
 
     - Once you've added your db config as listed above, go to the `src` folder from your terminal and execute `npm sequelize db:create`
+
+
+## Flights Table/ DB Desig
+    - Airplanes Table
+    - Cities Table
+    - Airports Table
+    - Flights Table
+
+    > Relationships:
+    - One flight belongs to one airplane but one airplane can be used in multiple flights.
+    - A airport will be in a city but one city can have multiple airports.
+    - A flight have only one airplane but one airplane can have multiple flights.
+
+
